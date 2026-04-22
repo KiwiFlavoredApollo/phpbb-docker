@@ -18,7 +18,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  IMAGE_NAME: evandarwin/phpbb
+  IMAGE_NAME: kiwiflavoredapollo/phpbb
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
     # Only run scheduled jobs on the main repository
     if: >-
       github.event_name != 'schedule' || 
-      (github.event_name == 'schedule' && github.repository == 'evandarwin/docker-phpbb')
+      (github.event_name == 'schedule' && github.repository == 'kiwiflavoredapollo/docker-phpbb')
 
     steps:
       - name: Checkout repository
