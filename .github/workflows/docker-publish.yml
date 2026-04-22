@@ -149,7 +149,7 @@ jobs:
 
       # Scan the image for vulnerabilities - with set version instead of master branch
       - name: Scan for vulnerabilities
-        uses: aquasecurity/trivy-action@0.30.0
+        uses: aquasecurity/trivy-action@0.35.0
         with:
           image-ref: ${{ steps.image-name.outputs.versioned_image }}
           format: 'sarif'
