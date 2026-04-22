@@ -80,7 +80,7 @@ jobs:
             VERSION=$(echo "$VERSION" | \
               grep -o '"name": "[^"]*"' | \
               grep '"name": "release-' | \
-              grep -v 'RC' | \
+              grep -Eiv '\-(a|b|rc)[0-9]+' | \
               head -1 | \
               sed 's/"name": "release-//;s/"//g')
             
